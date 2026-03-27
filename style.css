@@ -8,8 +8,8 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding: 0;
-  height: 100vh;
+  padding: 20px;
+  min-height: 100vh;
   overflow-x: hidden;
   box-sizing: border-box;
   font-size: 16px;
@@ -23,6 +23,7 @@ margin: 0;
 padding: 0;
 width: 100%;
 max-width: 500px;
+flex-wrap: wrap;
 box-sizing: border-box;
   }
 
@@ -30,4 +31,11 @@ box-sizing: border-box;
     max-width: 100%;
     box-sizing: border-box;
     font-size: 16px;
+  }
+
+  @media(max-width:400px){
+    input,button{
+      font-size: 14px;
+      flex: 1 1 100%;
+    }
   }
