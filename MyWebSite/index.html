@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+   
+    <head>
+        <meta charset="UTF-8">
+        <title>うまい棒○本分やんWWWWWシュミレーター</title>
+         <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <h1>うまい棒○本分やんWWWWWシュミレーター</h1>
+
+        <p>
+            絶対にいましたよね、何でもうまい棒で換算する人。<br>
+            え？あなたがその人？<br>
+            今のうまい棒って１０円じゃないので、パッと割り切れなくてモヤモヤしますよね。<br>
+            そんな無駄なストレスのためだけに、このサイトは存在します。
+        </p>
+
+        <div class="input-area">
+        <input type="number"id="money"
+        oninput="showYen()"
+        placeholder="金額を入力">
+        <button onclick="calc()">計算</button>
+        </div>
+
+        <p id="result"></p>
+        <p id="yen"></p>
+
+        <script>
+            function calc()
+            {let money=Number(document.getElementById("money").value);
+           if (money === 0 || isNaN(money)){document.getElementById("result").innerText="金額入れてくれな換算できへんで。";
+            return;
+           } 
+           
+            
+            let umaibo=Math.floor(money/15);
+
+
+            document.getElementById("result").innerText=
+            "うまい棒"+umaibo+"本分やんWWWWW";
+            }
+            function showYen(){
+            let money=document.getElementById("money").value;
+            if(money===""){
+                document.getElementById("yen").innerText="";
+                return;
+            }
+            document.getElementById("yen").innerText=money+"円";
+           }
+            </script>
+    </body>
+</html>
