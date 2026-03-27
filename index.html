@@ -38,16 +38,15 @@
             
             let umaibo=Math.floor(money/15);
 
-            document.getElementById("money").addEventListener("keydown",function(e){
-                if(e.key==="enter"){
-                    calc();
-                }
-            });
-
 
             document.getElementById("result").innerText=
             "うまい棒"+umaibo+"本分やんWWWWW";
             }
+             document.getElementById("money").addEventListener("keydown",function(e){
+                if(e.key==="Enter"){
+                    calc();
+                }
+            });
             function showYen(){
             let money=document.getElementById("money").value;
             if(money===""){
